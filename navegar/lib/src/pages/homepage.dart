@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navegar/src/pages/sing_in.dart';
 import 'package:navegar/src/pages/sing_up.dart';
 
 import '../widgets/icon_containers.dart';
@@ -68,7 +69,11 @@ class _HomePageState extends State<HomePage> {
                 width: double.infinity,
                 height: 60.0,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    final route =
+                        MaterialPageRoute(builder: (context) => SingIn());
+                    Navigator.push(context, route);
+                  },
                   child: Text(
                     "SING IN",
                     style: TextStyle(

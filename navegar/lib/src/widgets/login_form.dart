@@ -53,7 +53,9 @@ class _LoginFormState extends State<LoginForm> {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {final route =
+                        MaterialPageRoute(builder: (context) => SingUp());
+                    Navigator.push(context, route);},
               child: Text(
                 "INGRESAR",
                 style: TextStyle(

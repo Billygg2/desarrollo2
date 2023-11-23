@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:navegar/src/widgets/input_text.dart';
 
-class LoginForm extends StatefulWidget {
-  LoginForm({super.key});
+class RegisterForm extends StatefulWidget {
+  RegisterForm({super.key});
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<RegisterForm> createState() => _RegisterFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
-  String _email = "";
+class _RegisterFormState extends State<RegisterForm> {
+  String _usuario= "";
+  String _nombre= "";
   String _password = "";
   @override
   Widget build(BuildContext context) {
@@ -17,16 +18,15 @@ class _LoginFormState extends State<LoginForm> {
       child: Column(
         children: <Widget>[
           InputText(
-              hint: "Email Address",
-              label: "Email Address",
-              keyborad: TextInputType.emailAddress,
+              hint: "Usuario",
+              label: "Usuario",
               icono: Icon(Icons.verified_user),
               onChanged: ((data) {
-                _email = data!;
+                _usuario = data!;
               }),
               validator: (data) {
                 if (!data!.contains("@")) {
-                  return "Invalido Email";
+                  return "Invalido User";
                 }
                 return null!;
               }),
@@ -34,8 +34,24 @@ class _LoginFormState extends State<LoginForm> {
             height: 15.0,
           ),
           InputText(
-              hint: "User Password",
-              label: "User Password",
+              hint: "Nombre",
+              label: "Nombre",
+              icono: Icon(Icons.verified_user),
+              onChanged: ((data) {
+                _nombre = data!;
+              }),
+              validator: (data) {
+                if (!data!.contains("@")) {
+                  return "Invalido Nombre";
+                }
+                return null!;
+              }),
+          Divider(
+            height: 15.0,
+          ),
+          InputText(
+              hint: "Password",
+              label: "Password",
               obsecure: false,
               icono: Icon(Icons.lock_clock),
               onChanged: ((data) {

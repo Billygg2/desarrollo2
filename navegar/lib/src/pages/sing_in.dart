@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navegar/src/widgets/login_form.dart';
 
 import '../widgets/icon_containers.dart';
 
@@ -37,6 +38,7 @@ class _SingInState extends State<SingIn> {
               Divider(
                 height: 20.0,
               ),
+              LoginForm()
               // qui llamamos a la pantalla del formulario
             ],
           ),

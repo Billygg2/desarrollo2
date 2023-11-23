@@ -33,19 +33,19 @@ class _HomePageState extends State<HomePage> {
                 url: "imges/images.jpg",
               ),
               Text(
-                "Bienvenido a mi curso",
-                style: TextStyle(fontFamily: "PermanetMar", fontSize: 30.0),
+                "Bienvenido al curso",
+                style: TextStyle(fontFamily: "PermanetMar", fontSize: 20.0),
+              ),
+              Text(
+                "Ejercicio N° 1",
+                style: TextStyle(fontFamily: "PermanetMar", fontSize: 20.0),
               ),
               Divider(
                 height: 20.0,
               ),
-              Text(
-                "Ejercicio N° 3",
-                style: TextStyle(fontFamily: "PermanetMar", fontSize: 30.0),
-              ),
               SizedBox(
                 width: 300.0,
-                height: 60.0,
+                height: 30.0,
                 child: ElevatedButton(
                   onPressed: () {
                     final route =
@@ -63,11 +63,11 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Divider(
-                height: 20.0,
+                height: 10.0,
               ),
               SizedBox(
                 width: double.infinity,
-                height: 60.0,
+                height: 30.0,
                 child: ElevatedButton(
                   onPressed: () {
                     final route =

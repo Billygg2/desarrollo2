@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:navegar/src/widgets/register_login.dart';
 
 import '../widgets/icon_containers.dart';
 
@@ -38,6 +39,7 @@ class _SingUpState extends State<SingUp> {
               Divider(
                 height: 20.0,
               ),
+              RegisterForm()
             ],
           ),
         ),

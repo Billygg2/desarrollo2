@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 class InputText extends StatelessWidget {
 final String label;
 final String hint;
-final Icon icono;
+final Icon? icono;
 final TextInputType keyborad;
 final bool obsecure;
-final void Function(String data)onChanged;
-final String Function(String data)validator;
+final void Function(String? data)? onChanged;
+final String Function(String? data)? validator;
 const InputText({key, 
       this.label ="",
       this.hint ="",
       this.icono,
       this.keyborad = TextInputType.text,
       this.obsecure = false,
-      required this.onChanged,
-      required this.validator,
+      this.onChanged,
+      this.validator,
       }): super(key: key);
 
 
@@ -27,7 +27,7 @@ const InputText({key,
         keyboardType: this.keyborad,
         obscureText: this.obsecure,
         onChanged: this.onChanged,
-        // validator: this.validator,
+        validator: this.validator,
         decoration: InputDecoration(
           hintText: this.hint,
           labelText: this.label,
